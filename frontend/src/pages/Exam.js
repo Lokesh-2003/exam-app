@@ -33,8 +33,7 @@ const Exam = () => {
       const response = await getExam(examId);
       setExamData(response.data);
       setRemainingTime(response.data.remaining_time);
-      
-      // Initialize answers state
+    
       const initialAnswers = {};
       response.data.questions.forEach((q, index) => {
         if (q.selected_answer) {
